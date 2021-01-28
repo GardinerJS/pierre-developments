@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 test('renders the Footer component` textContent', () => {
   const expectedText =
-    '© Copyright Pierre Developments 2020, All Rights Reserved';
+    '© Copyright Pierre Developments 2021, All Rights Reserved';
 
   const { getByTestId } = render(<Footer />);
   const footerComponent = getByTestId('footer-component');
