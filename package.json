@@ -1,6 +1,6 @@
 {
-  "name": "pierre-developments",
   "homepage": "http://GardinerJS.github.io/pierre-developments",
+  "name": "pierre-developments",
   "version": "2021.1.0",
   "private": true,
   "dependencies": {
