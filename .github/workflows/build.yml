@@ -1,0 +1,30 @@
+name: Build
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Set-up Node
+        uses: actions/setup-node@v1
+
+      - name: Check-out Code
+        uses: actions/checkout@v2
+
+      - name: Installing NPM
+        run: yarn install
+
+      - name: Build
+        run: make build
+
+      - name: Test
+        run: make test
